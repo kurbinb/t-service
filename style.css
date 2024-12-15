@@ -1,0 +1,468 @@
+
+.header{
+    position: fixed;
+    background-color: rgba(0,0,0, 0.745);
+    width: 100%;
+    z-index: 9999;
+}
+
+.body2{
+    
+    right: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 60px;
+    max-width: 1600px;
+    margin: 0 auto;
+    /*padding: 0 30px;*/
+    font-size: 24px;
+}
+
+
+
+.navlist{
+    display: flex;
+    column-gap: 40px;
+}
+
+.navitem{
+
+}
+
+
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.impressumblock{
+    background-color: white;
+    height: 10vh;
+}
+
+.aktienstarter-pic {
+    height: 80vh;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.65);
+}
+
+.reperaturheaderpic{
+    height: 80vh;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.55);
+}
+
+.angebotheaderpic{
+    height: 70vh;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.55);
+}
+
+
+.reinigungheaderpic{
+    height: 52vh;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+
+.beratungheaderpic{
+    height: 69vh;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.9);
+}
+
+
+.trpic{
+    height: 50vh;
+    width: 100vb;
+}
+
+.reinigungscontainer{
+   
+
+
+}
+
+.ReperaturContainer{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    margin: 0 300px;
+}
+
+.reperaturpics{
+    height: 40vh;
+    width: 50vb;
+}
+
+.reperaturpic2{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.servicetop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 400px;
+}
+
+.servicetext{
+    font-size: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(162, 108, 22);
+}
+
+
+
+.servicetext:hover{
+    font-weight: bolder;
+    color: rgba(162, 108, 22, 0.311);
+}
+
+.reinigungsstep{
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: space-between;
+    border-color: black;
+    border: 10px;
+}
+
+.linie{
+    height: 30px;
+    width: 100%;
+    color: black;
+}
+
+.ueberunterschrift{
+    display: block;
+    margin: 0 100px;
+}
+
+
+.reinigungtext{
+    color: rgb(0, 0, 0);
+}
+
+h4{
+    font-size: 25px;
+}
+
+.menu-link {
+    color: rgba(256,256, 256, 0.75);
+    text-decoration: none;
+    transition: all 0.4s;
+    position: relative;
+   
+}
+
+.menu-link:hover, .menu-link:focus {
+    color: rgba(256,256, 256, 1);
+    /*text-decoration: underline;*/
+}
+
+.menu-link::after{
+    content: '';
+    height: 3px;
+    width: 100%;
+    background-color: rgb(203, 100, 10);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: all 0.2s;
+    opacity: 0;
+    pointer-events: none;
+
+}
+
+.menu-link:hover::after{
+    opacity: 1;
+    display: block;
+}
+
+
+.dropdown{
+    display: none;
+}
+
+.container:hover .dropdown{
+    display: block;
+    position: absolute;
+    top: 100%;
+    background-color: black;
+
+}
+
+.dropdown ul{
+    display: block;
+    margin: 10px;
+}
+
+.dropdown ul li{
+    width: 150px;
+    padding: 10px;
+}
+
+
+
+.KB-Logo{
+    
+    height:6.5vh;
+}
+
+.Headline{
+    position: absolute;
+    left: 50px;
+    top: 300px;
+    color: white;
+    font-size: 70px;
+    width: 500px;
+    /*text-shadow: 5px 10px 5px rgb(0,0,0, 5);*/
+}
+
+.yellow{
+    color: rgb(255, 255, 255);
+}
+
+.Einleitung{
+    text-align: center;
+    
+
+}
+
+.Beschreibungssektion{
+    height: 300px;
+    padding: 30px 100px;    
+    display: flex;
+    justify-content: space-between;
+    margin: 0 150px;
+    gap: 50px;
+}
+
+.Button{
+    background-color: rgb(165, 131, 180);
+    padding: 7px 18px;
+    border-radius: 1000px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.2s;
+
+    /*box-shadow: 5px 2px 15px rgba(0, 0, 0, 5);*/
+}
+
+.Button:hover{
+
+    background-color: rgba(165, 131, 180, 0.441);
+
+}
+
+.HalbeBreite{
+    width: 50%
+
+}
+
+h2 {
+    text-align: center;
+    font-size: 45px;
+    color:rgb(9, 39, 46);
+    /*text-decoration: underline;*/
+}
+
+.Perser{
+    position: relative;
+
+}
+
+.Nepal{
+    position: relative;
+}
+
+.Perserteppich1{
+
+    left: 25px;
+    height: 25vh;
+
+}
+
+
+.Perserteppich2{
+ 
+    
+    left: 500px;
+    height: 25vh;
+
+}
+
+
+.Perserteppich3{
+   
+    left: 1000px;
+    height: 25vh;
+
+}
+
+
+.Youtube{
+    width: 560px;
+    height: 315px;
+
+}
+.Youtube{
+        width: 100vw * 0.4;
+        height: 56.25 * 0.4;
+    }
+@media (max-width: 700px) {
+    .Beschreibungssektion{
+        flex-direction:column;
+        align-items: center;
+        height: unset;
+    }
+}
+
+.bar{
+    height: 2px;
+    width: 27px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+li::marker {
+    color: transparent;
+  }
+
+
+.slideshow {
+    width: 60vw;
+    height: 70vh;
+    box-shadow: 0px 0px 10px gray;
+    position: relative;
+    
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.slide-bild {
+    width: 100%;
+}
+
+.slide-textbereich {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 70%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    padding: 0 15% 0 15%;
+}
+
+.slide-ueberschrift {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.slide-beschreibung {
+    font-size: 1.4em;
+    margin: 0;
+}
+
+.pfeil {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    font-size: 50px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    color: rgba(255, 255, 255, 0.5);
+    user-select: none;
+    cursor: pointer;
+}
+
+.pfeil:hover {
+    color: white;
+}
+
+.pfeil-links {
+    left: 0;
+}
+
+.pfeil-rechts {
+    right: 0;
+}
+
+.indikatorenliste {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    list-style-type: none;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.indikator {
+    padding: 0 10px;
+    user-select: none;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 2s;
+}
+
+.aktiv {
+    opacity: 1;
+}
+
+
+.Bottomline{
+    background-color: rgb(134, 145, 145);
+  
+  position: absolute;
+    width: 100%;
+    
+    
+}
+
+.impressum
+{
+    justify-content: center;
+    align-items: center;
+}
+
+.placeholder
+{
+    margin: 0;
+    overflow: auto
+}
