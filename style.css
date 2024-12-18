@@ -493,8 +493,94 @@ li::marker {
     display: none;
 }
 
+/* Der Hintergrund des Pop-ups */
+.popup {
+    display: none; /* Versteckt das Pop-up standardmäßig */
+    position: fixed; /* Das Pop-up bleibt immer an derselben Position */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Halbtransparenter Hintergrund */
+    justify-content: center;
+    align-items: center;
+  }
+  
 
-@media (max-width: 800px) {
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    height: 700px;
+    width: 450px;
+    text-align: center;
+    position: relative;
+  }
+
+  button {
+    padding: 10px 20px;  /* Vergrößert den Innenabstand (oben/unten, links/rechts) */
+    font-size: 12px;     /* Erhöht die Schriftgröße */
+    background-color: #bd9840; /* Hintergrundfarbe */
+    color: white;        /* Textfarbe */
+    border: none;        /* Kein Rand */
+    border-radius: 5px;  /* Abgerundete Ecken */
+    cursor: pointer;     /* Zeigt den Zeiger-Cursor an */
+    margin-right: 20px;
+}
+
+
+  /* Schließbutton */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  .close-btn:hover {
+    color: #ff0000;
+  }
+
+  .popupname{
+    margin: 0;
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .Contact-Inputs {
+    width: 100%;           /* Stellt sicher, dass die Eingabefelder die volle Breite des Containers einnehmen */
+    padding: 10px;         /* Fügt etwas Abstand innerhalb des Feldes hinzu */
+    font-size: 16px;       /* Vergrößert die Schriftgröße */
+    border: 1px solid #ccc;  /* Border-Stil */
+    border-radius: 5px;    /* Rundet die Ecken der Eingabefelder ab */
+    box-sizing: border-box; /* Verhindert, dass Padding und Border die Breite des Elements überschreiten */
+    margin-bottom: 15px;   /* Fügt etwas Abstand zwischen den Feldern hinzu */
+}
+.Contact-Inputs2 {
+    width: 100%;           /* Stellt sicher, dass die Eingabefelder die volle Breite des Containers einnehmen */
+    padding: 35px;         /* Fügt etwas Abstand innerhalb des Feldes hinzu */
+    font-size: 16px;       /* Vergrößert die Schriftgröße */
+    border: 1px solid #ccc;  /* Border-Stil */
+    border-radius: 5px;    /* Rundet die Ecken der Eingabefelder ab */
+    box-sizing: border-box; /* Verhindert, dass Padding und Border die Breite des Elements überschreiten */
+    margin-bottom: 15px;   /* Fügt etwas Abstand zwischen den Feldern hinzu */
+    text-align: left;
+}
+
+textarea.Contact-Inputs2 {
+    height: 150px;             /* Höhe des Textareas */
+    padding-top: 10px;         /* Abstand nach oben */
+    padding-left: 10px;        /* Abstand nach links */
+    resize: vertical;          /* Ermöglicht das Vergrößern der Höhe */
+    text-align: left;          /* Text links ausrichten */
+    vertical-align: top;       /* Stellt sicher, dass der Text nach oben ausgerichtet wird */
+}
+
+
+
+
+  @media (max-width: 800px) {
 
     body {
        max-width: 100%;
@@ -572,7 +658,7 @@ display: none;
       width: 40vb;
     }
 
-    .navlist li:nth-child(1), .navlist li:nth-child(2), .navlist li:nth-child(3), .navlist li:nth-child(4)
+    .navlist li:nth-child(1), .navlist li:nth-child(2), .navlist li:nth-child(3), .navlist li:nth-child(4), .navlist li:nth-child(5)
     {   
         visibility: hidden;
         display: none;
@@ -634,5 +720,3 @@ display: none;
 
 
 }
-
-
