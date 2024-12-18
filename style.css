@@ -735,6 +735,10 @@ display: none;
     .reperaturheaderpic{
         height: 48vh;
     }
-
+        .popup-content{
+        height: 700px;
+        width: 250px;
+    }
+    
 
 }
