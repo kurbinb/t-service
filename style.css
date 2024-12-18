@@ -255,6 +255,10 @@ h4{
     gap: 50px;
 }
 
+.ladenbild1{
+    width: 35%;
+}
+
 .Button{
     background-color: rgb(165, 131, 180);
     padding: 7px 18px;
@@ -274,6 +278,10 @@ h4{
 
 .HalbeBreite{
     width: 50%
+
+}
+
+.GMAPS{
 
 }
 
@@ -327,13 +335,6 @@ h2 {
         width: 100vw * 0.4;
         height: 56.25 * 0.4;
     }
-@media (max-width: 700px) {
-    .Beschreibungssektion{
-        flex-direction:column;
-        align-items: center;
-        height: unset;
-    }
-}
 
 .bar{
     height: 2px;
@@ -466,3 +467,100 @@ li::marker {
     margin: 0;
     overflow: auto
 }
+
+
+
+@media (max-width: 800px) {
+    .container{
+        flex-direction: row;
+        align-items: center;
+        height: 69px;
+    }
+
+    .aktienstarter-pic{
+        height: 55vh;
+
+    }
+    .Headline{
+        font-size: 40px;
+        flex-direction: column;
+        align-items:center;
+        display:block;
+        
+    }
+    .Einleitung{
+        margin: 0 20px;
+    }
+
+    .HalbeBreite{
+        
+    }
+
+    .Beschreibungssektion {
+        height: auto; /* Höhe an den Inhalt anpassen */
+        padding: 20px; /* Weniger Padding auf kleineren Bildschirmen */
+        margin: 0 20px; /* Weniger Abstand zu den Rändern */
+        flex-direction: column; /* Layout von horizontal auf vertikal ändern */
+        gap: 20px; /* Weniger Abstand zwischen den Elementen */
+        text-align: center;
+        align-items: center;
+    }
+
+    .ladenbild1{
+      width: 40vb;
+    }
+
+    .navlist li:nth-child(1), .navlist li:nth-child(2), .navlist li:nth-child(3), .navlist li:nth-child(4)
+    {   
+        visibility: hidden;
+    }
+    .navlist li {
+        padding: 10px 15px;
+    }
+
+    .navlist{
+        height: 60px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+    .reinigungscontainer{
+        height: auto;
+        padding: 20px;
+        margin: 0 20px;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .reinigungsstep{
+        height: auto;
+        padding: 20px;
+        margin: 0 20px;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .ReperaturContainer{
+        height: auto;
+        padding: 20px;
+        margin: 0 20px;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        align-items: center;
+    }
+    .reperaturheaderpic{
+        height: 48vh;
+    }
+
+
+}
+
+
