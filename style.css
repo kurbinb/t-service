@@ -482,11 +482,14 @@ li::marker {
 
     }
     .Headline{
-        font-size: 40px;
-        flex-direction: column;
-        align-items:center;
-        display:block;
-        
+        height: auto; /* Höhe an den Inhalt anpassen */
+        padding: 20px; /* Weniger Padding auf kleineren Bildschirmen */
+        margin: 0 20px; /* Weniger Abstand zu den Rändern */
+        flex-direction: column; /* Layout von horizontal auf vertikal ändern */
+        gap: 20px; /* Weniger Abstand zwischen den Elementen */
+        text-align: center;
+        align-items: center;
+        font-size: 37px;
     }
     .Einleitung{
         margin: 0 20px;
