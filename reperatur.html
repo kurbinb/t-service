@@ -49,9 +49,48 @@
                     <a class="menu-link" href="/impressum.html">Impressum</a>
                   </li>
                   <li class="navitem">
-                    <a class="menu-link Button" href="#">Kontakt</a>
+                    <button id="openPopupBtn">KONTAKT</button>
                   </li>
-                </ul>                     
+                </ul>         
+                
+                <!-- Popup Fenster-->
+            
+                <div id="popup" class="popup">
+                  <div class="popup-content">
+                    <span id="closePopupBtn" class="close-btn">&times;</span>
+                    <h3>Kontaktieren sie uns!</h3>
+                    <form action="https://api.web3forms.com/submit" method="post" class="contact-left">
+                      <div class="contact-left-title">
+                          <hr width="40%">
+                      </div>
+                      <input type="hidden" name="access_key" value="91b93a3c-0bf1-4d70-8ff6-2837b7e42072">
+                      <br>
+                      <div class="popupname">
+                        Name*:
+                        <input type="text" name="name" placeholder="Vor- und Nachname" class="Contact-Inputs" required>
+                      </div>
+                      <br>
+                      <div class="popupname">
+                        E-Mail*:
+                      <input type="email" name="email" placeholder="deine@e-mail.de" class="Contact-Inputs" required>
+                      </div>
+                      <br>
+                      <div class="popupname">
+                        Telefon:
+                        <input type="telefon" name="telefon" placeholder="(nicht erforderlich)" class="Contact-Inputs">
+                      </div>
+                      <br>
+                      <div class="popupname">
+                        Nachricht:
+                      <textarea name="message" placeholder="Deine Nachricht" class="Contact-Inputs2" required></textarea>
+                      </div>
+                      <br>
+                      <button type="submit">Abschicken</button>
+                  
+                  </form>
+
+                  </div>
+                </div>                        
             
                 <!-- Hamburger-Icon -->
                 <div class="hamburger" id="hamburger">
@@ -157,5 +196,6 @@
 
 
 <script src="script.js"></script>
+<script src="script2.js"></script>
 
     </body>
