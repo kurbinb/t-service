@@ -736,9 +736,12 @@ display: none;
         height: 48vh;
     }
         .popup-content{
-        height: 700px;
+        height: 600px;
         width: 250px;
     }
+      textarea.Contact-Inputs2 {
+        height: 70px;             /* Höhe des Textareas */
+     }
     
 
 }
