@@ -1,10 +1,16 @@
 // Hole das Pop-up und die Schaltflächen
 const popup = document.getElementById('popup');
 const openPopupBtn = document.getElementById('openPopupBtn');
+const openPopupBtn2 = document.getElementById('openPopupBtn2');
+
 const closePopupBtn = document.getElementById('closePopupBtn');
 
 // Öffnet das Pop-up, wenn der Button geklickt wird
 openPopupBtn.addEventListener('click', function() {
+  popup.style.display = 'flex'; // Setze den Pop-up-Anzeigemodus auf 'flex', um es sichtbar zu machen
+});
+
+openPopupBtn2.addEventListener('click', function() {
   popup.style.display = 'flex'; // Setze den Pop-up-Anzeigemodus auf 'flex', um es sichtbar zu machen
 });
 
