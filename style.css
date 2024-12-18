@@ -30,6 +30,22 @@ body{
     font-size: 24px;
 }
 
+.hamburger{
+        display: none; 
+        cursor: pointer;
+        flex-direction: column;
+        gap: 5px;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+
+}
+
+.hamburger .line {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+  }
 
 
 .navlist{
@@ -473,6 +489,9 @@ li::marker {
     overflow: auto
 }
 
+.navlist2{
+    display: none;
+}
 
 
 @media (max-width: 800px) {
@@ -488,7 +507,30 @@ li::marker {
         width: 100%;
     }
 
+    .hamburger{
+        display: flex;
+    }
+
+    .Button{
+        display: none;
+    }
     
+    .navlist2.show{
+        display: flex;
+        background-color: rgba(0, 0,0, 0.75);
+        flex-direction: column;
+        margin-top: 239px;
+        text-align: center;
+        align-items: center;
+        
+    }
+
+    .navlist2.show li {
+        margin-bottom: 10px; /* Vergrößert den Abstand zwischen den einzelnen Listenelementen */
+        line-height: 1.5; /* Erhöht den Zeilenabstand innerhalb der Listenelemente */
+    }
+
+
 
     .container{
         flex-direction: row;
