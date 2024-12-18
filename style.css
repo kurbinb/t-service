@@ -6,6 +6,10 @@
     z-index: 9999;
 }
 
+body{
+    overflow-x: hidden
+}
+
 .body2{
     
     right: 200px;
@@ -14,16 +18,13 @@
     align-items: center;
 }
 
-body{
-    overflow-x: hidden
-}
 
 .container { 
     display: flex;
     align-items: center;
     justify-content: space-between;
     min-height: 60px;
-
+    width: 100%;
     margin: 0 auto;
     /*padding: 0 30px;*/
     font-size: 24px;
@@ -34,6 +35,7 @@ body{
 .navlist{
     display: flex;
     column-gap: 40px;
+    width: 100%;
 }
 
 .navitem{
@@ -235,7 +237,7 @@ h4{
     top: 300px;
     color: white;
     font-size: 70px;
-    width: 500px;
+    
     /*text-shadow: 5px 10px 5px rgb(0,0,0, 5);*/
 }
 
@@ -474,18 +476,37 @@ li::marker {
 
 
 @media (max-width: 800px) {
+
+    body {
+       max-width: 100%;
+       overflow-x: hidden;  /* Verhindert horizontales Scrollen */
+       margin: 0; /* Entfernt ungewollte Ränder */
+       padding: 0; /* Verhindert, dass Padding die Breite beeinflusst */
+          }
+
+    .header{
+        width: 100%;
+    }
+
+    
+
     .container{
         flex-direction: row;
         align-items: center;
         height: 69px;
+        width: 100%;  /* Container darf nicht breiter als der Bildschirm werden */
+        max-width: 100%;
     }
 
     .aktienstarter-pic{
-        height: 65vh;
+        height: 60vh;
+        max-width: 100%;
+        width: 100%;
 
     }
     .Headline{
         height: auto; /* Höhe an den Inhalt anpassen */
+        width: 100%;
         padding: 20px; /* Weniger Padding auf kleineren Bildschirmen */
         margin: 0 20px; /* Weniger Abstand zu den Rändern */
         flex-direction: column; /* Layout von horizontal auf vertikal ändern */
@@ -496,6 +517,7 @@ li::marker {
     }
     .Einleitung{
         margin: 0 20px;
+        width: 100%;
     }
 
     .HalbeBreite{
@@ -519,9 +541,11 @@ li::marker {
     .navlist li:nth-child(1), .navlist li:nth-child(2), .navlist li:nth-child(3), .navlist li:nth-child(4)
     {   
         visibility: hidden;
+        display: none;
     }
     .navlist li {
         padding: 10px 15px;
+        
     }
 
     .navlist{
@@ -529,8 +553,16 @@ li::marker {
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        width: 100%;
+        column-gap: 0;
+    }
+    .navbar{
+        width: 100%;
     }
 
+    .navitem{
+        width: 100%;
+    }
 
 
     .reinigungscontainer{
