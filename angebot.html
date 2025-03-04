@@ -15,6 +15,134 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="dialoge.css">
 
+<style>
+.shop-container {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.shop-header {
+    background: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+.filter-container {
+    text-align: center;
+    margin: 20px;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+.product {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    height: 400px; /* Einheitliche Größe */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.product img {
+    width: 100%;
+    height: 600px; /* Einheitliche Höhe */
+    object-fit: cover;
+    border-radius: 10px;
+}
+.product h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+.product p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+.button {
+    background: #007bfff;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin-top: auto;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    max-width: 800px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.modal-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+}
+
+.modal-left {
+    width: 40%;
+}
+
+.modal-left h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.modal-left img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.modal-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.modal-info-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end; /* Button nach rechts */
+    margin-top: 20px;
+}
+
+.modal-footer button {
+    padding: 10px 20px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modal-footer button:hover {
+    background: darkred;
+}
+
+</style>
+    
   </head>
   <body>
       <header class="header">
@@ -50,137 +178,154 @@
                     <button id="openPopupBtn">KONTAKT</button>
                   </li>
                 </ul>         
+
+
+                   <script>
+        let productImages = [];
+        for (let i = 1; i <= 50; i++) {
+            productImages.push(`bilder/produkt${i}.jpg`);
+        }
+        
+         function openProduct(name, price, image) {
+             document.getElementById("modal").style.display = "block";
+             document.getElementById("modal-title").innerText = name;
+             document.getElementById("modal-img").src = image;
+             document.getElementById("modal-price").innerText = price + "€";
+        }
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+        function filterProducts() {
+            let priceFilter = document.getElementById("price-filter").value;
+            let brandFilter = document.getElementById("brand-filter").value.toLowerCase();
+            let products = document.getElementsByClassName("product");
+            
+            for (let product of products) {
+                let priceText = product.getElementsByTagName("strong")[0].innerText;
+                let price = parseFloat(priceText.replace("€", ""));
+                let brand = product.getAttribute("data-brand").toLowerCase();
                 
-                <!-- Popup Fenster-->
-            
-                <div id="popup" class="popup">
-                  <div class="popup-content">
-                    <span id="closePopupBtn" class="close-btn">&times;</span>
-                    <h3>Kontaktieren sie uns!</h3>
-                    <form action="https://api.web3forms.com/submit" method="post" class="contact-left">
-                      <div class="contact-left-title">
-                          <hr width="40%">
-                      </div>
-                      <input type="hidden" name="access_key" value="91b93a3c-0bf1-4d70-8ff6-2837b7e42072">
-                      <br>
-                      <div class="popupname">
-                        Name*:
-                        <input type="text" name="name" placeholder="Vor- und Nachname" class="Contact-Inputs" required>
-                      </div>
-                      <br>
-                      <div class="popupname">
-                        E-Mail*:
-                      <input type="email" name="email" placeholder="deine@e-mail.de" class="Contact-Inputs" required>
-                      </div>
-                      <br>
-                      <div class="popupname">
-                        Telefon:
-                        <input type="telefon" name="telefon" placeholder="(nicht erforderlich)" class="Contact-Inputs">
-                      </div>
-                      <br>
-                      <div class="popupname">
-                        Nachricht:
-                      <textarea name="message" placeholder="Deine Nachricht" class="Contact-Inputs2" required></textarea>
-                      </div>
-                      <br>
-                      <button type="submit">Abschicken</button>
-                  
-                  </form>
-
-                  </div>
-                </div>                         
-            
-                <!-- Hamburger-Icon -->
-                <div class="hamburger" id="hamburger">
-                  <div class="line"></div>
-                  <div class="line"></div>
-                  <div class="line"></div>
-                </div>
-
-
-                <ul class="navlist2" id="navlist2">
-                    <li class="navitem">
-                      <a class="menu-link" href="index.html">Home</a>
-                    </li>
-                    <li class="navitem">
-                      <a class="menu-link" href="/service.html">Service</a>
-                      <!-- Dropdown -->
-                      <!-- <div class="dropdown">
-                        <ul>
-                          <li><a class="menu-link" href="/reperatur.html">ReperaTur</a></li>
-                          <li><a class="menu-link" href="/reinigung.html">ReiniGung</a></li>
-                          <li><a class="menu-link" href="/beratung.html">BeraTung</a></li>
-                          <li><a class="menu-link" href="/weiteres.html">WeiteRes</a></li>
-                        </ul>
-                      </div>  -->
-                    </li>
-                    <li class="navitem">
-                      <a class="menu-link" href="/angebot.html">Angebot</a>
-                    </li>
-                    <li class="navitem">
-                      <a class="menu-link" href="/impressum.html">Impressum</a>
-                    </li>
-                     <li class="navitem">
-                      <button id="openPopupBtn2">KONTAKT</button>
-                    </li>
-                  </ul> 
-              </nav>
-            
-    
-        </div>
-        
-        
-    </header> 
-
-
-
-<img class="angebotheaderpic" src="img/IMG_5149.jpeg">
-
-
-<h1> Hier finden sie unsere Angebotsliste:</h1>
-
-
-
-<div class="Perser">
-<h3> Perserteppiche:</h3>
-
-<img class ="Perserteppich1" src="img/persertepp.jpg">
-<img class ="Perserteppich2" src="img/persertepp2.jpg">
-<img class ="Perserteppich3" src="img/persertepp3.jpg">
-</div>
-
-
-
-<div class="Nepal">
-<h3>Nepalteppiche:</h3>
-<h4>...</h4>
-
-<h3>Zieglerteppiche:</h3>
-</div>
-
-<div class="Bottomline"> 
+                if ((price <= priceFilter || priceFilter === "") && (brand.includes(brandFilter) || brandFilter === "")) {
+                    product.style.display = "block";
+                } else {
+                    product.style.display = "none";
+                }
+            }
+        }
+    </script>
+</head>
+               
+<body class="shop-container">
+    <header class="shop-header">
+        <h1>Unser Onlineshop</h1>
+    </header>
+    <div class="filter-container">
+        <label for="price-filter">Maximaler Preis: </label>
+        <input type="number" id="price-filter" oninput="filterProducts()" placeholder="Preis eingeben...">
+        <label for="brand-filter">Marke: </label>
+        <select id="brand-filter" onchange="filterProducts()">
+            <option value="">Alle</option>
+            <option value="Nain">Nain</option>
+            <option value="Täbriz">Täbriz</option>
+            <option value="Hamedan">Hamedan</option>
+        </select>
+    </div>
     <div class="container">
-        <ul>
-        <nav class="navbar">  
-           <u1 class="navlist">
-               <li class="navitem">
-               <a class="menu-link" href="/TService Website/impressum.html">Impressum</a></li>
-               <li class="navitem">
-               <a class="menu-link" href="">Kontakt</a></li>
-               <li class="navitem">
-                <a> © 2009 Teppich Service Galerie Schwandorf </a></li>
-         </nav></u1> 
-        </ul> 
-   </div>
-       
+        <script>
+            let products = [
+                { name: "Täbriz", brand: "155 x 200 cm", oldPrice: 3990.00, newPrice: 1700.00, image: "bilder/produkt1.jpg" },
+                { name: "Nain Exclusive", brand: "110 x 160 cm", oldPrice: 5999.00, newPrice: 3500.00, image: "bilder/produkt2.jpg" },
+                { name: "Bidjar", brand: "90 x 145 cm",oldPrice: 1390.00, newPrice: 799.00, image: "bilder/produkt3.jpg" },
+                { name: "Nain", brand: "107 x 178 cm", oldPrice: 2790.00, newPrice: 1390.00, image: "bilder/produkt4.jpg" },
+                { name: "Ghom", brand: "80 x 133 cm", oldPrice: 1000, newPrice: 999.00, image: "bilder/produkt5.jpg" },
+                { name: "Hamedan", brand: "74 x 126 cm", oldPrice: 279.00, newPrice: 125.00, image: "bilder/produkt6.jpg" },
+                { name: "Kargai", brand: "100 x 160 cm", oldPrice: 1290.00, newPrice: 590.00, image: "bilder/produkt7.jpg" },
+                { name: "Handweber", brand: "110 x 110 cm", oldPrice: 100.00, newPrice: 99.99, image: "bilder/produkt8.jpg" },
+                { name: "Goltogh", brand: "100 x 150 cm", oldPrice: 1290.00, newPrice: 799.00, image: "bilder/produkt9.jpg" },
+                { name: "Ghom", brand: "105 x 155 cm", oldPrice: 1399.00, newPrice: 799.00, image: "bilder/produkt10.jpg" },
+                { name: "Shiraz", brand: "80 x 130 cm", oldPrice: 799.00, newPrice: 299.00, image: "bilder/produkt11.jpg" },
+                { name: "Shiraz - grün", brand: "100 x 150 cm", oldPrice: 1399.00, newPrice: 799.00, image: "bilder/produkt12.jpg" },
+                { name: "Sarogh", brand: "102 x 155 cm", oldPrice: 2600.00, newPrice: 1200.00, image: "bilder/produkt13.jpg" },
+                { name: "Bidjar", brand: "100 x 160 cm", oldPrice: 1399.00, newPrice: 799.00, image: "bilder/produkt14.jpg" },
+                { name: "Isfahan", brand: "161 x 94 cm", oldPrice: 1950.00, newPrice: 950.00, image: "bilder/produkt15.jpg" },
+                { name: "Belutsch", brand: "90 x 145 cm", oldPrice: 1800.00, newPrice: 590.00, image: "bilder/produkt16.jpg" },
+                { name: "Sarogh", brand: "105 x 160 cm", oldPrice: 1750.00, newPrice: 780.00, image: "bilder/produkt17.jpg" },
+                { name: "Varamin", brand: "100 x 150 cm", oldPrice: 2350.00, newPrice: 790.00, image: "bilder/produkt18.jpg" },
+                { name: "Salagh", brand: "106 x 160 cm", oldPrice: 3300.00, newPrice: 1390.00, image: "bilder/produkt19.jpg" },
+                { name: "Sarogh - bunt", brand: "100 x 160 cm", oldPrice: 1890.00, newPrice: 790.00, image: "bilder/produkt20.jpg" },
+                { name: "Punjab", brand: "100 x 150 cm", oldPrice: 1190.00, newPrice: 590.00, image: "bilder/produkt21.jpg" },
+                { name: "Nepal", brand: "90 x 160 cm", oldPrice: 600.00, newPrice: 590.00, image: "bilder/produkt22.jpg" },
+                { name: "Nain", brand: "63 x 90 cm", oldPrice: 1390.00, newPrice: 590.00, image: "bilder/produkt23.jpg" },
+                { name: "Bidjar", brand: "70 x 110 cm", oldPrice: 1699.00, newPrice: 1349.00, image: "bilder/produkt24.jpg" },
+                { name: "Afghan/Khan", brand: "80 x 125 cm", oldPrice: 799.00, newPrice: 399.00, image: "bilder/produkt25.jpg" },
+                { name: "Shiraz - bunt", brand: "55 x 80 cm", oldPrice: 100.00, newPrice: 99.00, image: "bilder/produkt26.jpg" },
+                { name: "Ghom", brand: "110 cm ⌀", oldPrice: 2490.00, newPrice: 1290.00, image: "bilder/produkt27.jpg" },
+                { name: "Lori", brand: "123 x 172 cm", oldPrice: 1999.00, newPrice: 1390.00, image: "bilder/produkt28.jpg" },
+                { name: "Loribaft-Persia", brand: "144 x 200 cm", oldPrice: 3900.00, newPrice: 1900.00, image: "bilder/produkt29.jpg" },
+                { name: "Hamedan", brand: "130 x 215 cm", oldPrice: 599.00, newPrice: 299.00, image: "bilder/produkt30.jpg" },
+                { name: "Lori", brand: "125 x 190 cm", oldPrice: 2390.00, newPrice: 1390.00, image: "bilder/produkt31.jpg" },
+                { name: "Bakhtiar", brand: "140 x 200 cm", oldPrice: 1890.00, newPrice: 1200.00, image: "bilder/produkt32.jpg" },
+                { name: "Ghaziabad", brand: "130 x 200 cm", oldPrice: 5400.00, newPrice: 2900.00, image: "bilder/produkt33.jpg" },
+                { name: "Täbriz", brand: "120 x 227 cm", oldPrice: 1350.00, newPrice: 399.00, image: "bilder/produkt34.jpg" },
+                { name: "Kaschmir/Seide", brand: "120 x 190 cm", oldPrice: 2700.00, newPrice: 1300.00, image: "bilder/produkt35.jpg" },
+                { name: "Lambada", brand: "130 x 190 cm", oldPrice: 150.00, newPrice: 149.00, image: "bilder/produkt36.jpg" },
+                { name: "Handweber", brand: "130 x 190 cm", oldPrice: 239.00, newPrice: 139.00, image: "bilder/produkt37.jpg" },
+                { name: "Kaschmar", brand: "124 x 192 cm", oldPrice: 2100.00, newPrice: 1200.00, image: "bilder/produkt38.jpg" },
+                { name: "Ladik", brand: "109 x 187 cm", oldPrice: 150.00, newPrice: 149.00, image: "bilder/produkt39.jpg" },
+                { name: "Sumak", brand: "110 x 200 cm", oldPrice: 1790.00, newPrice: 999.00, image: "bilder/produkt40.jpg" },
+                { name: "Nepal", brand: "120 x 180 cm", oldPrice: 999.00, newPrice: 690.00, image: "bilder/produkt41.jpg" },
+                { name: "Bidjar", brand: "130 x 200 cm", oldPrice: 3999.00, newPrice: 1999.00, image: "bilder/produkt42.jpg" },
+                { name: "Bidjar Exclusive", brand: "150 x 215 cm", oldPrice: 3990.00, newPrice: 1700.00, image: "bilder/produkt43.jpg" },
+                { name: "Indo Bidjar", brand: "136 x 216 cm", oldPrice: 2390.00, newPrice: 999.00, image: "bilder/produkt44.jpg" },
+                { name: "Pueblo Bordüre", brand: "130 x 200 cm", oldPrice: 899.00, newPrice: 499.00, image: "bilder/produkt45.jpg" },
+                { name: "Piazza Design", brand: "130 x 200 cm", oldPrice: 300.00, newPrice: 299.00, image: "bilder/produkt46.jpg" },
+                { name: "Makalu Nepal", brand: "150 x 200 cm", oldPrice: 1790.00, newPrice: 1100.00, image: "bilder/produkt47.jpg" },
+                { name: "Nepal", brand: "144 x 200 cm", oldPrice: 1250.00, newPrice: 670.00, image: "bilder/produkt48.jpg" },
+                { name: "Nepal", brand: "144 x 196 cm", oldPrice: 990.00, newPrice: 550.00, image: "bilder/produkt49.jpg" },
+                { name: "Khezhen", brand: "180 x 200 cm", oldPrice: 7800.00, newPrice: 3200.00, image: "bilder/produkt50.jpg" },
+                { name: "Naim", brand: "120 x 180 cm", oldPrice: 2399.00, newPrice: 1599.00, image: "bilder/produkt51.jpg" },
+                { name: "Wandteppich", brand: "140 x 230 cm", oldPrice: 12990.00, newPrice: 7999.00, image: "bilder/produkt52.jpg" }
+            ];
+        
+            products.forEach((product, index) => {
+                let priceHTML = product.oldPrice 
+            ? `<span style="text-decoration: line-through; color: gray;">${product.oldPrice.toFixed(2)}€</span> 
+               <strong style="color: red;">${product.newPrice.toFixed(2)}€</strong>`
+            : `<strong class="price">${product.newPrice.toFixed(2)}€</strong>`;
 
-   </div>
-    
+                document.write(`
+                <div class="product" data-brand="${product.brand}" style="border: 1px solid #ddd; padding: 10px; margin: 10px; display: inline-block; text-align: center;">
+                <img src="${product.image}" alt="${product.name}" style="width: 150px; height: auto;">
+                <h2>${product.name}</h2>
+                <p>Größe: ${product.brand}</p>
+                <p>
+                    <span style="text-decoration: line-through; color: gray;">${product.oldPrice.toFixed(2)}€</span> 
+                    <strong style="color: red;">${product.newPrice.toFixed(2)}€</strong>
+                </p>
+                <a href="#" class="button" onclick="openProduct('${product.name}', '${product.newPrice}', '${product.image}'); return false;" style="display: inline-block; padding: 5px 10px; background: green; color: white; text-decoration: none; border-radius: 5px;">Mehr Details</a>
+            </div>
+                `);
+            });
+        
 
-
-
-</div>
-<script src="script.js"></script>
-
+        </script>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-left">
+                <h2 id="modal-title"></h2>
+                <img id="modal-img" src="" alt="Produktbild">
+            </div>
+            <div class="modal-right">
+                <h3 class="modal-info-title">Informationen zum Produkt</h3>
+                <p><strong id="modal-price"></strong></p>
+                <p>Weitere Details und Beschreibung hier...</p>
+                <div class="modal-footer">
+                    <button onclick="closeModal()">Schließen</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
+
