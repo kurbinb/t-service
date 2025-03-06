@@ -17,111 +17,46 @@
     <header class="header">
         <div class="container">
             
-             <a href="index.html"> <img class="KB-Logo" src="/img/tservice.jpg"> </a>
-             
-             
-             <nav class="navbar">
-                <ul class="navlist" id="navlist">
-                  <li class="navitem">
-                    <a class="menu-link" href="index.html">Home</a>
-                  </li>
-                  <li class="navitem">
-                    <a class="menu-link" href="/service.html">Service</a>
-                    <!-- Dropdown -->
-                    <div class="dropdown">
-                      <ul>
-                        <li><a class="menu-link" href="/reperatur.html">Reperatur</a></li>
-                        <li><a class="menu-link" href="/reinigung.html">Reinigung</a></li>
-                        <li><a class="menu-link" href="/beratung.html">Beratung</a></li>
-                        <li><a class="menu-link" href="/weiteres.html">Weiteres</a></li>
-                      </ul>
-                    </div> 
-                  </li>
-                  <li class="navitem">
-                    <a class="menu-link" href="/angebot.html">Angebot</a>
-                  </li>
-                  <li class="navitem">
-                    <a class="menu-link" href="/impressum.html">Impressum</a>
-                  </li>
-                  <li class="navitem">
-                    <button id="openPopupBtn">KONTAKT</button>
-                  </li>
-                </ul>       
-                               <!-- Popup Fenster-->
-            
-                <div id="popup" class="popup">
-                  <div class="popup-content">
-                    <span id="closePopupBtn" class="close-btn">&times;</span>
-                    <h3>Kontaktieren sie uns!</h3>
-                    <form action="https://api.web3forms.com/submit" method="post" class="contact-left">
-                      <div class="contact-left-title">
-                          <hr width="40%">
-                      </div>
-                      <input type="hidden" name="access_key" value="91b93a3c-0bf1-4d70-8ff6-2837b7e42072">
-                      <br>
-                      <div class="popupname">
-                        Name*:
-                        <input type="text" name="name" placeholder="Vor- und Nachname" class="Contact-Inputs" required>
-                      </div>
-                      <br>
-                      <div class="popupname">
-                        E-Mail*:
-                      <input type="email" name="email" placeholder="deine@e-mail.de" class="Contact-Inputs" required>
-                      </div>
-                      <br>
-                      <div class="popupname">
-                        Telefon:
-                        <input type="telefon" name="telefon" placeholder="(nicht erforderlich)" class="Contact-Inputs">
-                      </div>
-                      <br>
-                      <div class="popupname">
-                        Nachricht:
-                      <textarea name="message" placeholder="Deine Nachricht" class="Contact-Inputs2" required></textarea>
-                      </div>
-                      <br>
-                      <button type="submit">Abschicken</button>
-                  
-                  </form>
-
-                  </div>
-                </div>                        
-            
-                <!-- Hamburger-Icon -->
-                <div class="hamburger" id="hamburger">
-                  <div class="line"></div>
-                  <div class="line"></div>
-                  <div class="line"></div>
-                </div>
-
-
-                <ul class="navlist2" id="navlist2">
+             <a href="index.html"> <img class="KB-Logo" src="/TService Website/img/tservice.jpg"> </a>
+             <ul>
+             <nav class="navbar">  
+                <u1 class="navlist">
                     <li class="navitem">
-                      <a class="menu-link" href="index.html">Home</a>
+                    <a class="menu-link" href="index.html">Home</a></li>
+                    <li class="navitem">
+                        <a class="menu-link" href="/TService Website/service.html">Service</a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li> <a class="menu-link" href="/TService Website/reperatur.html">Reperatur</a></li>
+                                    <li> <a class="menu-link" href="/TService Website/reinigung.html">Reinigung</a></li>
+                                    <li> <a class="menu-link" href="/TService Website/beratung.html">Beratung</a></li>
+                                    <li> <a class="menu-link" href="/TService Website/weiteres.html">Weiteres</a></li>
+                                </ul>
+                            </div> 
                     </li>
                     <li class="navitem">
-                      <a class="menu-link" href="/service.html">Service</a>
-                      <!-- Dropdown -->
-                      <!-- <div class="dropdown">
-                        <ul>
-                          <li><a class="menu-link" href="/reperatur.html">ReperaTur</a></li>
-                          <li><a class="menu-link" href="/reinigung.html">ReiniGung</a></li>
-                          <li><a class="menu-link" href="/beratung.html">BeraTung</a></li>
-                          <li><a class="menu-link" href="/weiteres.html">WeiteRes</a></li>
-                        </ul>
-                      </div>  -->
-                    </li>
+                    <a class="menu-link" href="/TService Website/angebot.html">Angebot</a></li>
                     <li class="navitem">
-                      <a class="menu-link" href="/angebot.html">Angebot</a>
-                    </li>
+                    <a class="menu-link" href="/TService Website/impressum.html">Impressum</a></li>
                     <li class="navitem">
-                      <a class="menu-link" href="/impressum.html">Impressum</a>
-                    </li>
-                   <li class="navitem">
-                      <button id="openPopupBtn2">KONTAKT</button>
-                    </li>
-                  </ul> 
-              </nav>
+                    <a class="menu-link Button" href="">Kontakt</a></li>
                 
+              </nav></u1> 
+
+                <!-- <div class="Hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+
+                </div> -->
+             </ul> 
+        </div>
+            
+    
+        </div>
+        
+        
+    </header> 
 
 
 <img class="angebotheaderpic" src="img/IMG_5149.jpeg">
@@ -133,50 +68,48 @@
     margin: 0;
     padding: 0;
 }
-
 .shop-header {
     background: #333;
     color: white;
     padding: 15px;
     text-align: center;
 }
-
 .filter-container {
     text-align: center;
     margin: 20px;
 }
-
-
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
 .product {
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 15px;
     text-align: center;
-    height: 400px;
+    height: 400px; /* Einheitliche Größe */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-
 .product img {
     width: 100%;
-    height: 300px;
+    height: 600px; /* Einheitliche Höhe */
     object-fit: cover;
     border-radius: 10px;
 }
-
 .product h2 {
     font-size: 18px;
     margin: 10px 0;
 }
-
 .product p {
     font-size: 16px;
     margin: 5px 0;
 }
-
 .button {
-    background: #007bff;
+    background: #007bfff;
     color: white;
     padding: 10px;
     text-decoration: none;
@@ -184,16 +117,14 @@
     cursor: pointer;
     display: block;
     margin-top: auto;
-    text-align: center;
 }
-
 .modal {
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%;
+    width: 70%;
     max-width: 800px;
     background: white;
     padding: 20px;
@@ -203,13 +134,13 @@
 
 .modal-content {
     display: flex;
-    flex-direction: column;
+    align-items: flex-start;
     gap: 20px;
     position: relative;
 }
 
 .modal-left {
-    width: 100%;
+    width: 40%;
 }
 
 .modal-left h2 {
@@ -219,12 +150,13 @@
 
 .modal-left img {
     width: 100%;
-    max-height: 300px;
+    max-height: 100%;
     object-fit: contain;
     border-radius: 5px;
 }
 
 .modal-right {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -239,7 +171,7 @@
 
 .modal-footer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end; /* Button nach rechts */
     margin-top: 20px;
 }
 
@@ -256,16 +188,6 @@
     background: darkred;
 }
 
-@media (min-width: 768px) {
-    .modal-content {
-        flex-direction: row;
-    }
-
-    .modal-left {
-        width: 40%;
-    }
-}
-
 </style>
     <script>
         let productImages = [];
@@ -278,6 +200,8 @@
              document.getElementById("modal-title").innerText = name;
              document.getElementById("modal-img").src = image;
              document.getElementById("modal-price").innerText = price + "€";
+             document.getElementById("modal-description").innerText = description;
+
         }
         function closeModal() {
             document.getElementById("modal").style.display = "none";
@@ -319,56 +243,56 @@
     <div class="container">
         <script>
             let products = [
-                { name: "Täbriz", brand: "155 x 200 cm", oldPrice: 3990.00, newPrice: 1700.00, image: "bilder/produkt1.jpg" },
-                { name: "Nain Exclusive", brand: "110 x 160 cm", oldPrice: 5999.00, newPrice: 3500.00, image: "bilder/produkt2.jpg" },
-                { name: "Bidjar", brand: "90 x 145 cm",oldPrice: 1390.00, newPrice: 799.00, image: "bilder/produkt3.jpg" },
-                { name: "Nain", brand: "107 x 178 cm", oldPrice: 2790.00, newPrice: 1390.00, image: "bilder/produkt4.jpg" },
-                { name: "Ghom", brand: "80 x 133 cm", oldPrice: 1000, newPrice: 999.00, image: "bilder/produkt5.jpg" },
-                { name: "Hamedan", brand: "74 x 126 cm", oldPrice: 279.00, newPrice: 125.00, image: "bilder/produkt6.jpg" },
-                { name: "Kargai", brand: "100 x 160 cm", oldPrice: 1290.00, newPrice: 590.00, image: "bilder/produkt7.jpg" },
-                { name: "Handweber", brand: "110 x 110 cm", oldPrice: 100.00, newPrice: 99.99, image: "bilder/produkt8.jpg" },
-                { name: "Goltogh", brand: "100 x 150 cm", oldPrice: 1290.00, newPrice: 799.00, image: "bilder/produkt9.jpg" },
-                { name: "Ghom", brand: "105 x 155 cm", oldPrice: 1399.00, newPrice: 799.00, image: "bilder/produkt10.jpg" },
-                { name: "Shiraz", brand: "80 x 130 cm", oldPrice: 799.00, newPrice: 299.00, image: "bilder/produkt11.jpg" },
-                { name: "Shiraz - grün", brand: "100 x 150 cm", oldPrice: 1399.00, newPrice: 799.00, image: "bilder/produkt12.jpg" },
-                { name: "Sarogh", brand: "102 x 155 cm", oldPrice: 2600.00, newPrice: 1200.00, image: "bilder/produkt13.jpg" },
-                { name: "Bidjar", brand: "100 x 160 cm", oldPrice: 1399.00, newPrice: 799.00, image: "bilder/produkt14.jpg" },
-                { name: "Isfahan", brand: "161 x 94 cm", oldPrice: 1950.00, newPrice: 950.00, image: "bilder/produkt15.jpg" },
-                { name: "Belutsch", brand: "90 x 145 cm", oldPrice: 1800.00, newPrice: 590.00, image: "bilder/produkt16.jpg" },
-                { name: "Sarogh", brand: "105 x 160 cm", oldPrice: 1750.00, newPrice: 780.00, image: "bilder/produkt17.jpg" },
-                { name: "Varamin", brand: "100 x 150 cm", oldPrice: 2350.00, newPrice: 790.00, image: "bilder/produkt18.jpg" },
-                { name: "Salagh", brand: "106 x 160 cm", oldPrice: 3300.00, newPrice: 1390.00, image: "bilder/produkt19.jpg" },
-                { name: "Sarogh - bunt", brand: "100 x 160 cm", oldPrice: 1890.00, newPrice: 790.00, image: "bilder/produkt20.jpg" },
-                { name: "Punjab", brand: "100 x 150 cm", oldPrice: 1190.00, newPrice: 590.00, image: "bilder/produkt21.jpg" },
-                { name: "Nepal", brand: "90 x 160 cm", oldPrice: 600.00, newPrice: 590.00, image: "bilder/produkt22.jpg" },
-                { name: "Nain", brand: "63 x 90 cm", oldPrice: 1390.00, newPrice: 590.00, image: "bilder/produkt23.jpg" },
-                { name: "Bidjar", brand: "70 x 110 cm", oldPrice: 1699.00, newPrice: 1349.00, image: "bilder/produkt24.jpg" },
-                { name: "Afghan/Khan", brand: "80 x 125 cm", oldPrice: 799.00, newPrice: 399.00, image: "bilder/produkt25.jpg" },
-                { name: "Shiraz - bunt", brand: "55 x 80 cm", oldPrice: 100.00, newPrice: 99.00, image: "bilder/produkt26.jpg" },
-                { name: "Ghom", brand: "110 cm ⌀", oldPrice: 2490.00, newPrice: 1290.00, image: "bilder/produkt27.jpg" },
-                { name: "Lori", brand: "123 x 172 cm", oldPrice: 1999.00, newPrice: 1390.00, image: "bilder/produkt28.jpg" },
-                { name: "Loribaft-Persia", brand: "144 x 200 cm", oldPrice: 3900.00, newPrice: 1900.00, image: "bilder/produkt29.jpg" },
-                { name: "Hamedan", brand: "130 x 215 cm", oldPrice: 599.00, newPrice: 299.00, image: "bilder/produkt30.jpg" },
-                { name: "Lori", brand: "125 x 190 cm", oldPrice: 2390.00, newPrice: 1390.00, image: "bilder/produkt31.jpg" },
-                { name: "Bakhtiar", brand: "140 x 200 cm", oldPrice: 1890.00, newPrice: 1200.00, image: "bilder/produkt32.jpg" },
-                { name: "Ghaziabad", brand: "130 x 200 cm", oldPrice: 5400.00, newPrice: 2900.00, image: "bilder/produkt33.jpg" },
-                { name: "Täbriz", brand: "120 x 227 cm", oldPrice: 1350.00, newPrice: 399.00, image: "bilder/produkt34.jpg" },
-                { name: "Kaschmir/Seide", brand: "120 x 190 cm", oldPrice: 2700.00, newPrice: 1300.00, image: "bilder/produkt35.jpg" },
-                { name: "Lambada", brand: "130 x 190 cm", oldPrice: 150.00, newPrice: 149.00, image: "bilder/produkt36.jpg" },
-                { name: "Handweber", brand: "130 x 190 cm", oldPrice: 239.00, newPrice: 139.00, image: "bilder/produkt37.jpg" },
-                { name: "Kaschmar", brand: "124 x 192 cm", oldPrice: 2100.00, newPrice: 1200.00, image: "bilder/produkt38.jpg" },
-                { name: "Ladik", brand: "109 x 187 cm", oldPrice: 150.00, newPrice: 149.00, image: "bilder/produkt39.jpg" },
-                { name: "Sumak", brand: "110 x 200 cm", oldPrice: 1790.00, newPrice: 999.00, image: "bilder/produkt40.jpg" },
-                { name: "Nepal", brand: "120 x 180 cm", oldPrice: 999.00, newPrice: 690.00, image: "bilder/produkt41.jpg" },
-                { name: "Bidjar", brand: "130 x 200 cm", oldPrice: 3999.00, newPrice: 1999.00, image: "bilder/produkt42.jpg" },
-                { name: "Bidjar Exclusive", brand: "150 x 215 cm", oldPrice: 3990.00, newPrice: 1700.00, image: "bilder/produkt43.jpg" },
-                { name: "Indo Bidjar", brand: "136 x 216 cm", oldPrice: 2390.00, newPrice: 999.00, image: "bilder/produkt44.jpg" },
-                { name: "Pueblo Bordüre", brand: "130 x 200 cm", oldPrice: 899.00, newPrice: 499.00, image: "bilder/produkt45.jpg" },
-                { name: "Piazza Design", brand: "130 x 200 cm", oldPrice: 300.00, newPrice: 299.00, image: "bilder/produkt46.jpg" },
-                { name: "Makalu Nepal", brand: "150 x 200 cm", oldPrice: 1790.00, newPrice: 1100.00, image: "bilder/produkt47.jpg" },
-                { name: "Nepal", brand: "144 x 200 cm", oldPrice: 1250.00, newPrice: 670.00, image: "bilder/produkt48.jpg" },
-                { name: "Nepal", brand: "144 x 196 cm", oldPrice: 990.00, newPrice: 550.00, image: "bilder/produkt49.jpg" },
-                { name: "Khezhen", brand: "180 x 200 cm", oldPrice: 7800.00, newPrice: 3200.00, image: "bilder/produkt50.jpg" },
+                { name: "Täbriz", brand: "155 x 200 cm", oldPrice: 3990.00, newPrice: 1700.00, image: "bilder/produkt1.jpg", description:"test" },
+                { name: "Nain Exclusive", brand: "110 x 160 cm", oldPrice: 5999.00, newPrice: 3500.00, image: "bilder/produkt2.jpg", description:"test"},
+                { name: "Bidjar", brand: "90 x 145 cm",oldPrice: 1390.00, newPrice: 799.00, image: "bilder/produkt3.jpg" , description:"test"},
+                { name: "Nain", brand: "107 x 178 cm", oldPrice: 2790.00, newPrice: 1390.00, image: "bilder/produkt4.jpg" , description:"test"},
+                { name: "Ghom", brand: "80 x 133 cm", oldPrice: 1000, newPrice: 999.00, image: "bilder/produkt5.jpg", description:"test" },
+                { name: "Hamedan", brand: "74 x 126 cm", oldPrice: 279.00, newPrice: 125.00, image: "bilder/produkt6.jpg" , description:"test"},
+                { name: "Kargai", brand: "100 x 160 cm", oldPrice: 1290.00, newPrice: 590.00, image: "bilder/produkt7.jpg" , description:"test"},
+                { name: "Handweber", brand: "110 x 110 cm", oldPrice: 100.00, newPrice: 99.99, image: "bilder/produkt8.jpg" , description:"test"},
+                { name: "Goltogh", brand: "100 x 150 cm", oldPrice: 1290.00, newPrice: 799.00, image: "bilder/produkt9.jpg" , description:"test"},
+                { name: "Ghom", brand: "105 x 155 cm", oldPrice: 1399.00, newPrice: 799.00, image: "bilder/produkt10.jpg" , description:"test"},
+                { name: "Shiraz", brand: "80 x 130 cm", oldPrice: 799.00, newPrice: 299.00, image: "bilder/produkt11.jpg" , description:"test"},
+                { name: "Shiraz - grün", brand: "100 x 150 cm", oldPrice: 1399.00, newPrice: 799.00, image: "bilder/produkt12.jpg" , description:"test"},
+                { name: "Sarogh", brand: "102 x 155 cm", oldPrice: 2600.00, newPrice: 1200.00, image: "bilder/produkt13.jpg", description:"test" },
+                { name: "Bidjar", brand: "100 x 160 cm", oldPrice: 1399.00, newPrice: 799.00, image: "bilder/produkt14.jpg" , description:"test"},
+                { name: "Isfahan", brand: "161 x 94 cm", oldPrice: 1950.00, newPrice: 950.00, image: "bilder/produkt15.jpg" , description:"test"},
+                { name: "Belutsch", brand: "90 x 145 cm", oldPrice: 1800.00, newPrice: 590.00, image: "bilder/produkt16.jpg" , description:"test"},
+                { name: "Sarogh", brand: "105 x 160 cm", oldPrice: 1750.00, newPrice: 780.00, image: "bilder/produkt17.jpg" , description:"test"},
+                { name: "Varamin", brand: "100 x 150 cm", oldPrice: 2350.00, newPrice: 790.00, image: "bilder/produkt18.jpg", description:"test" },
+                { name: "Salagh", brand: "106 x 160 cm", oldPrice: 3300.00, newPrice: 1390.00, image: "bilder/produkt19.jpg" , description:"test"},
+                { name: "Sarogh - bunt", brand: "100 x 160 cm", oldPrice: 1890.00, newPrice: 790.00, image: "bilder/produkt20.jpg" , description:"test"},
+                { name: "Punjab", brand: "100 x 150 cm", oldPrice: 1190.00, newPrice: 590.00, image: "bilder/produkt21.jpg", description:"test" },
+                { name: "Nepal", brand: "90 x 160 cm", oldPrice: 600.00, newPrice: 590.00, image: "bilder/produkt22.jpg", description:"test" },
+                { name: "Nain", brand: "63 x 90 cm", oldPrice: 1390.00, newPrice: 590.00, image: "bilder/produkt23.jpg", description:"test" },
+                { name: "Bidjar", brand: "70 x 110 cm", oldPrice: 1699.00, newPrice: 1349.00, image: "bilder/produkt24.jpg", description:"test" },
+                { name: "Afghan/Khan", brand: "80 x 125 cm", oldPrice: 799.00, newPrice: 399.00, image: "bilder/produkt25.jpg", description:"test" },
+                { name: "Shiraz - bunt", brand: "55 x 80 cm", oldPrice: 100.00, newPrice: 99.00, image: "bilder/produkt26.jpg", description:"test" },
+                { name: "Ghom", brand: "110 cm ⌀", oldPrice: 2490.00, newPrice: 1290.00, image: "bilder/produkt27.jpg", description:"test" },
+                { name: "Lori", brand: "123 x 172 cm", oldPrice: 1999.00, newPrice: 1390.00, image: "bilder/produkt28.jpg", description:"test" },
+                { name: "Loribaft-Persia", brand: "144 x 200 cm", oldPrice: 3900.00, newPrice: 1900.00, image: "bilder/produkt29.jpg", description:"test" },
+                { name: "Hamedan", brand: "130 x 215 cm", oldPrice: 599.00, newPrice: 299.00, image: "bilder/produkt30.jpg", description:"test" },
+                { name: "Lori", brand: "125 x 190 cm", oldPrice: 2390.00, newPrice: 1390.00, image: "bilder/produkt31.jpg" , description:"test"},
+                { name: "Bakhtiar", brand: "140 x 200 cm", oldPrice: 1890.00, newPrice: 1200.00, image: "bilder/produkt32.jpg", description:"test" },
+                { name: "Ghaziabad", brand: "130 x 200 cm", oldPrice: 5400.00, newPrice: 2900.00, image: "bilder/produkt33.jpg" , description:"test"},
+                { name: "Täbriz", brand: "120 x 227 cm", oldPrice: 1350.00, newPrice: 399.00, image: "bilder/produkt34.jpg", description:"test" },
+                { name: "Kaschmir/Seide", brand: "120 x 190 cm", oldPrice: 2700.00, newPrice: 1300.00, image: "bilder/produkt35.jpg", description:"test" },
+                { name: "Lambada", brand: "130 x 190 cm", oldPrice: 150.00, newPrice: 149.00, image: "bilder/produkt36.jpg", description:"test" },
+                { name: "Handweber", brand: "130 x 190 cm", oldPrice: 239.00, newPrice: 139.00, image: "bilder/produkt37.jpg", description:"test" },
+                { name: "Kaschmar", brand: "124 x 192 cm", oldPrice: 2100.00, newPrice: 1200.00, image: "bilder/produkt38.jpg", description:"test" },
+                { name: "Ladik", brand: "109 x 187 cm", oldPrice: 150.00, newPrice: 149.00, image: "bilder/produkt39.jpg", description:"test" },
+                { name: "Sumak", brand: "110 x 200 cm", oldPrice: 1790.00, newPrice: 999.00, image: "bilder/produkt40.jpg", description:"test" },
+                { name: "Nepal", brand: "120 x 180 cm", oldPrice: 999.00, newPrice: 690.00, image: "bilder/produkt41.jpg" , description:"test"},
+                { name: "Bidjar", brand: "130 x 200 cm", oldPrice: 3999.00, newPrice: 1999.00, image: "bilder/produkt42.jpg" , description:"test"},
+                { name: "Bidjar Exclusive", brand: "150 x 215 cm", oldPrice: 3990.00, newPrice: 1700.00, image: "bilder/produkt43.jpg" , description:"test"},
+                { name: "Indo Bidjar", brand: "136 x 216 cm", oldPrice: 2390.00, newPrice: 999.00, image: "bilder/produkt44.jpg" , description:"test"},
+                { name: "Pueblo Bordüre", brand: "130 x 200 cm", oldPrice: 899.00, newPrice: 499.00, image: "bilder/produkt45.jpg" , description:"test"},
+                { name: "Piazza Design", brand: "130 x 200 cm", oldPrice: 300.00, newPrice: 299.00, image: "bilder/produkt46.jpg" , description:"test"},
+                { name: "Makalu Nepal", brand: "150 x 200 cm", oldPrice: 1790.00, newPrice: 1100.00, image: "bilder/produkt47.jpg" , description:"test"},
+                { name: "Nepal", brand: "144 x 200 cm", oldPrice: 1250.00, newPrice: 670.00, image: "bilder/produkt48.jpg" , description:"test"},
+                { name: "Nepal", brand: "144 x 196 cm", oldPrice: 990.00, newPrice: 550.00, image: "bilder/produkt49.jpg" , description:"test"},
+                { name: "Khezhen", brand: "180 x 200 cm", oldPrice: 7800.00, newPrice: 3200.00, image: "bilder/produkt50.jpg", description:"test" },
                 { name: "Naim", brand: "120 x 180 cm", oldPrice: 2399.00, newPrice: 1599.00, image: "bilder/produkt51.jpg" },
                 { name: "Wandteppich", brand: "140 x 230 cm", oldPrice: 12990.00, newPrice: 7999.00, image: "bilder/produkt52.jpg" }
             ];
@@ -405,6 +329,7 @@
             <div class="modal-right">
                 <h3 class="modal-info-title">Informationen zum Produkt</h3>
                 <p><strong id="modal-price"></strong></p>
+                <p id="modal-description"></p>
                 <p>Weitere Details und Beschreibung hier...</p>
                 <div class="modal-footer">
                     <button onclick="closeModal()">Schließen</button>
